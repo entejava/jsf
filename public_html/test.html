@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular-1.5.6/angular.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        var testApp=angular.module("test",[]);    
+        testApp.controller("testCtrl", function($scope) {
+        $scope.status="Test app,you can add new products!";                  
+        $scope.item={
+            name :"",
+            price:0
+        };
+        $scope.itemList=[];
+        $scope.addItem=function(){
+            alert("addItem!");
+            var obj=$scope.item;
+            $scope.itemList.push(obj);
+            $scope.status="Added items:"+$scope.itemList.length;
+        }
+        
+   });
+        </script>
+    </head>
+    <body ng-app="test" ng-controller="testCtrl">
+        
+        <form>
+        <table>
+            <tr>
+                <td>New Product</td>
+                <td> <input type="text" name="item" ng-model="item.name">{{item.name}}</td>
+            </tr>
+           <tr>
+                <td>Price</td>
+                <td> <input type="text" name="price" ng-model="item.price">{{item.price}}</td>
+            </tr> 
+            <tr>              
+                <td><input type="button" value="Add" ng-click="addItem();"></td>
+            </tr>
+        </table>
+        <div>Status:{{status}}</div>                
+    </form>          
+    </body>
+</html>

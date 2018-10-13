@@ -1,0 +1,29 @@
+<h1>New</h1>
+
+    <form>
+        <table>
+            <tr>
+                <td>New Product</td>
+                <td> <input type="text" name="item" ng-model="item.name">{{item.name}}</td>
+            </tr>
+           <tr>
+                <td>Price</td>
+                <td> <input type="text" name="price" ng-model="item.price">{{item.price}}</td>
+            </tr> 
+            <tr>              
+                <td><input type="button" value="Add" ng-click="addItem();"></td>
+                <td><input type="button" value="List" ng-click="listItem();"></td>
+            </tr>
+        </table>
+        <p>Added Items</p>
+        <table style="background-color: activecaption; width: 400px;">
+            <tr><td>Name</td><td>Price</td></tr>
+            <tr ng-repeat="i in itemList">
+            
+            <td>{{i.name}}</td><td>{{i.price}}</td>
+            </tr>
+        </table>
+        <div>Status:{{status}}</div>
+        
+        
+    </form>

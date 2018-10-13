@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js" type="text/javascript"></script>
+        <script src="js/angular-route.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+    </head>
+    <body ng-app="app">
+        
+         <div>
+             <p style="background-color: #00ffff; font-size: 18px; text-align: center;">RIA Application Using Angular</p>
+        </div>      
+        <table>
+            <tr>
+                <td><a href="#new">New</a></td>
+                <td><a href="#edit">Edit</a></td>
+                <td><a href="#search">Search</a></td>
+                <td><a href="#home">Home</a></td> 
+            </tr>
+        </table>
+               
+        <div ng-view></div> 
+        <div>
+            <p style="background-color: antiquewhite; text-align: center">Angular Routing</p>
+        </div>                      
+    </body>
+</html>
